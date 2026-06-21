@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足彩知识库 · 从认识开始</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f8f9fb;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e293b;
+            line-height: 1.7;
+            padding: 2rem 1.25rem;
+        }
+        .page {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            padding: 3rem 2rem 3.5rem;
+        }
+        @media (max-width: 500px) {
+            .page {
+                padding: 2rem 1.25rem 2.5rem;
+            }
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+            color: #0f172a;
+        }
+        .subhead {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 2.5rem;
+            border-left: 3px solid #d0d9e6;
+            padding-left: 1rem;
+        }
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-top: 2.2rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+            letter-spacing: 0.01em;
+            border-bottom: 1px solid #e9edf2;
+            padding-bottom: 0.35rem;
+        }
+        h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 1.6rem;
+            margin-bottom: 0.4rem;
+            color: #334155;
+        }
+
+        /* 正文及卡片 */
+        p {
+            margin-bottom: 1.15rem;
+            color: #334155;
+        }
+        .intro-card {
+            background: #f1f5f9;
+            border-radius: 16px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0 2rem;
+            font-size: 0.95rem;
+        }
+        .intro-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 目录网格——知识库入口感 */
+        .dir-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem 1rem;
+            margin: 1.5rem 0 1.8rem;
+        }
+        .dir-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            transition: border 0.2s, background 0.2s;
+            color: #1e293b;
+        }
+        .dir-item strong {
+            display: block;
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 0.1rem;
+            color: #0f172a;
+        }
+        .dir-item span {
+            color: #64748b;
+            font-size: 0.8rem;
+        }
+        .dir-item:hover {
+            background: #f8fafc;
+            border-color: #94a3b8;
+        }
+        @media (max-width: 480px) {
+            .dir-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 提示区、相关信息 */
+        .note-box {
+            background: #fef9e7;
+            border-left: 4px solid #f5b041;
+            border-radius: 12px;
+            padding: 1rem 1.4rem;
+            margin: 1.8rem 0;
+            font-size: 0.92rem;
+            color: #5d4e37;
+        }
+        .note-box strong {
+            color: #8c6b3b;
+        }
+        .faq-mini {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px dashed #dce2ea;
+        }
+        .faq-item {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.8rem;
+        }
+        .faq-q {
+            min-width: 1.8rem;
+            font-weight: 500;
+            color: #475569;
+        }
+        .faq-a {
+            color: #334155;
+            font-size: 0.92rem;
+        }
+
+        /* 锚点链接文字 */
+        .inline-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(37, 99, 235, 0.25);
+            transition: border-color 0.2s;
+        }
+        .inline-link:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e9edf2;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-align: center;
+            margin-top: 2.5rem;
+            letter-spacing: 0.2px;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <h1>足彩 · 从零到熟悉</h1>
+    <div class="subhead">一个更清晰的起点，而非捷径</div>
+
+    <!-- 介绍区：自然叙述网站用途 -->
+    <p>
+        如果你第一次来到这个网站，可能会好奇它到底提供什么。简单说，<a href="https://ssl-football-lottery.com" class="inline-link">足彩</a>
+        知识库的核心意图是帮人更快地理解竞猜型彩票的基本规则、常见术语以及相关赛事背景。这里没有伪装成预测大师，也不兜售必胜方法——它更像一个安静的参考书架。
+    </p>
+
+    <!-- 目录式卡片：知识库入口感 -->
+    <h2>📂 你可以从这里开始</h2>
+    <div class="dir-grid">
+        <div class="dir-item">
+            <strong>基础规则</strong>
+            <span>赛果判定 · 奖金计算</span>
+        </div>
+        <div class="dir-item">
+            <strong>赛事类型</strong>
+            <span>联赛 · 杯赛 · 国家队</span>
+        </div>
+        <div class="dir-item">
+            <strong>常用术语</strong>
+            <span>让球 · 串关 · 赔率</span>
+        </div>
+        <div class="dir-item">
+            <strong>相关提示</strong>
+            <span>风险 · 限额 · 法规</span>
+        </div>
+    </div>
+    <p style="font-size:0.9rem; color:#64748b;">
+        每个模块都能单独展开，不过今天这个页面更侧重于帮你快速判断——这个站是否值得你花时间。
+    </p>
+
+    <!-- 说明区：克制叙述实际特点 -->
+    <h2>🔍 这个知识库实际包含什么</h2>
+    <div class="intro-card">
+        <p><strong>· 结构清晰的内容分类</strong><br>
+        竞猜类型、过关方式、奖金分配原则……每块都独立成篇，没有长篇大论的废话，适合需要快速查阅某个点的用户。</p>
+        <p><strong>· 常规动态与提醒</strong><br>
+        包括赛程变更说明、派奖时间参考、以及各省市销售政策的一般性介绍。数据更新频率不算高，但基础信息保持稳定。</p>
+        <p><strong>· 没有玄学，也没有承诺</strong><br>
+        这里找不到“必中公式”或“内部消息”。所有内容基于公开规则和常识，适合想自己判断的人。</p>
+    </div>
+
+    <!-- 提示区：自然风险与边界 -->
+    <h2>⚠️ 使用前值得知道的几件事</h2>
+    <div class="note-box">
+        <strong>理性边界</strong> —— 足球竞猜是一种娱乐消费，不是理财方式。知识库存在的意义是让人更清楚自己在参与什么，而不是鼓励过度投入。<br>
+        <span style="display:inline-block; margin-top:0.4rem;">如果你发现自己或身边的人难以控制参与频率，很多省份都设有求助热线，不妨先了解一下。</span>
+    </div>
+
+    <!-- 场景/相关信息区 -->
+    <h2>📌 什么情况下你会需要它</h2>
+    <p>
+        也许你刚接触竞猜，分不清“胜平负”和“让球胜平负”的区别；也许你玩了一段时间，却对奖金计算方式有点模糊。
+        也可能你只是好奇：<a href="https://ssl-football-lottery.com" class="inline-link">足彩</a> 这个领域到底有没有相对可靠的信息源。
+        无论哪种，把这里当作一个工具索引，而不是答案之书，会更合适。
+    </p>
+    <p>
+        另外，如果你常看欧洲五大联赛或欧冠，会发现这里的赛事参考大多围绕主流联赛展开——因为竞猜规则和这些比赛直接挂钩，了解背景往往比死记赔率更有用。
+    </p>
+
+    <!-- FAQ 摘要（不展开全部） -->
+    <div class="faq-mini">
+        <h3 style="border:none; padding:0; margin-top:0;">常见简问简答</h3>
+        <div class="faq-item">
+            <div class="faq-q">Q1</div>
+            <div class="faq-a"><strong>这里的规则和彩票店一致吗？</strong><br>基于国家体彩中心公布的基础框架，但各省市可能有个别微调，建议结合本地公告确认。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q2</div>
+            <div class="faq-a"><strong>有没有赛事推荐或分析？</strong><br>没有。知识库只解释“怎么玩”，不告诉“玩哪场”。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q3</div>
+            <div class="faq-a"><strong>网站更新频率如何？</strong><br>随规则调整或赛季变化不定期更新，不是日更型站点。</div>
+        </div>
+    </div>
+
+    <hr>
+    <p style="font-size:0.92rem; color:#475569;">
+        如果你只是想快速定位，可以把这个页面当作一个目录索引。<br>
+        记住：任何关于 <a href="https://ssl-football-lottery.com" class="inline-link">足彩</a> 的知识，最终都服务于你自己的判断。
+    </p>
+
+    <div class="tagline">— 知识库入口 · 认识 · 判断 —</div>
+</div>
+</body>
+</html>
