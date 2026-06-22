@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威廉希尔 · 简明指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            background: #f4f5f7;
+            color: #1e1f22;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0b0c10 0%, #1f2833 60%, #2c3e50 100%);
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to top, #f4f5f7, transparent);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #eaeaea;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            color: #b0bec5;
+            margin-top: 0.4rem;
+            font-weight: 300;
+            border-top: 1px solid #3e4a5a;
+            display: inline-block;
+            padding-top: 0.7rem;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .intro-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            margin-top: -2.2rem;
+            padding: 2.5rem 2.2rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 450;
+            border-left: 4px solid #1f2833;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+            color: #1e1f22;
+        }
+
+        .intro-card p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #2c2f33;
+        }
+
+        .highlight-link {
+            color: #0057a3;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #a0c4e8;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .highlight-link:hover {
+            color: #003b6f;
+            border-bottom: 1px solid #003b6f;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0 1.8rem;
+        }
+
+        .feature-item {
+            background: #f9fafb;
+            border-radius: 18px;
+            padding: 1.3rem 1.2rem;
+            border: 1px solid #e8eaed;
+            transition: box-shadow 0.2s;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .feature-item .emoji-badge {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            color: #1e1f22;
+        }
+
+        .feature-item p {
+            font-size: 0.92rem;
+            color: #3d4046;
+            margin-bottom: 0;
+        }
+
+        .faq-summary {
+            background: #f0f2f5;
+            border-radius: 20px;
+            padding: 1.6rem 1.8rem;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .faq-summary h4 {
+            font-weight: 450;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .faq-summary details {
+            margin-bottom: 0.7rem;
+            border-bottom: 1px solid #dde0e4;
+            padding-bottom: 0.6rem;
+        }
+
+        .faq-summary details:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-summary summary {
+            cursor: pointer;
+            font-weight: 450;
+            color: #1f2833;
+            padding: 0.2rem 0;
+            outline: none;
+        }
+
+        .faq-summary summary::marker {
+            color: #4a5a6e;
+        }
+
+        .faq-summary p {
+            margin-top: 0.4rem;
+            color: #3b3f46;
+            font-size: 0.94rem;
+            padding-left: 0.4rem;
+        }
+
+        .note-box {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0 2.5rem;
+            border: 1px solid #e0e4e8;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .note-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .note-box .strong-label {
+            font-weight: 500;
+            color: #1e2a36;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 2.5rem 1.5rem 3.5rem;
+            color: #4d535c;
+            font-size: 0.95rem;
+            border-top: 1px solid #d9dde3;
+            margin-top: 1rem;
+        }
+
+        .footer-note a {
+            color: #0057a3;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .tagline {
+                font-size: 0.95rem;
+            }
+            .intro-card {
+                padding: 1.8rem 1.2rem 1.5rem;
+                margin-top: -1.8rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .section-title {
+                font-size: 1.3rem;
+            }
+            .faq-summary {
+                padding: 1.2rem 1rem;
+            }
+            .note-box {
+                padding: 1.2rem 1rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero {
+                padding: 3.5rem 1rem 3rem;
+            }
+            .container {
+                padding: 0 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>威廉希尔</h1>
+        <div class="tagline">简明指南 · 访问提醒</div>
+    </header>
+
+    <main class="container">
+        <div class="intro-card">
+            <h2 class="section-title">关于这个页面</h2>
+            <p>
+                这里整理了一份关于 <a href="https://h5-wh.com" class="highlight-link">威廉希尔</a> 的简要介绍与访问说明。内容力求清晰、平实，不包含未经核实的承诺或诱导性表述，仅作为背景了解与操作提醒。
+            </p>
+            <p>
+                平台本身以多样化的体育赛事与娱乐项目为主，界面设计偏向轻量响应式，适合在移动端或桌面浏览器中直接使用。如果你正在寻找一个相对成熟的参考站点，不妨了解其基本功能与访问时的注意事项。
+            </p>
+
+            <h2 class="section-title" style="margin-top: 1.8rem;">常见特点与使用场景</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="emoji-badge">📱</span>
+                    <h3>移动优先</h3>
+                    <p>页面结构针对手机与平板优化，减少缩放与横向滚动，操作区域清晰。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="emoji-badge">⚙️</span>
+                    <h3>功能集成</h3>
+                    <p>赛事列表、实时数据、账户管理集中在同一界面，切换效率较高。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="emoji-badge">🔐</span>
+                    <h3>基础安全</h3>
+                    <p>采用 HTTPS 传输，登录环节具备常见验证步骤，建议用户自行确认环境安全。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="emoji-badge">🌐</span>
+                    <h3>多语言支持</h3>
+                    <p>界面适配中文及其他主要语言，降低理解门槛，适合不同地区用户。</p>
+                </div>
+            </div>
+
+            <div class="faq-summary">
+                <h4>📘 常见疑问摘要</h4>
+                <details>
+                    <summary>访问时需要注意什么？</summary>
+                    <p>建议使用最新版主流浏览器，并确保网络连接稳定。部分区域可能需要对 DNS 进行简单调整，具体可参考服务提供方的说明。</p>
+                </details>
+                <details>
+                    <summary>是否支持注册与账户管理？</summary>
+                    <p>是的，平台提供账户注册、登录及基本资料修改功能。注册时请使用真实且常用的邮箱或手机号。</p>
+                </details>
+                <details>
+                    <summary>内容更新频率如何？</summary>
+                    <p>体育赛事与相关数据基本保持实时或准实时更新，娱乐项目列表也会定期调整。短期内未看到变化可尝试刷新页面。</p>
+                </details>
+            </div>
+
+            <div class="note-box">
+                <p><span class="strong-label">📌 访问提醒：</span></p>
+                <p>
+                    如果你打算通过 <a href="https://h5-wh.com" class="highlight-link">威廉希尔</a> 获取信息或使用服务，建议首次访问时先浏览帮助中心或常见问题版块。部分功能可能需要完成身份验证后才能使用，请按指引逐步操作。
+                </p>
+                <p style="margin-top: 0.6rem; font-size: 0.93rem; color: #555a62;">
+                    本页不提供任何形式的下载、代理或绕过限制的方法，仅陈述已知可访问路径与常规使用方式。
+                </p>
+            </div>
+        </div>
+
+        <footer class="footer-note">
+            <p>本文档基于公开信息整理，仅供背景了解与参考。</p>
+            <p>主站链接：<a href="https://h5-wh.com">威廉希尔</a></p>
+        </footer>
+    </main>
+
+</body>
+</html>
